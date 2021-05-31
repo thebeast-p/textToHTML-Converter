@@ -1,0 +1,173 @@
+{% load static %}
+
+<! DOCTYPE html>
+<html>
+<head>
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("{%static 'Webx.jpg'%}");
+    /* Full height */
+    /*height: 100%;*/
+    width:100%;
+    height:100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_pos1{
+  position:absolute;
+  bottom: -35%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: Noto, serif;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  text-transform: uppercase;
+}
+
+.form_pos2{
+  position:absolute;
+  bottom: -20%;
+  right: 22%;
+  transform: translate(-50%, -50%);
+  margin-right: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: Noto, serif;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  text-transform: uppercase;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+<div class="bg">
+{% block content %}
+
+<form class='form_pos1' action='Converted.html' >
+
+<label for="title">Page Title:</label><br>
+<input type="text" id="titl" name="titl" placeholder="Enter Title of the page"><br><br>
+<label for="head1">Heading 1:</label><br>
+<input type="text" id="hd1" name="hd1" placeholder="Enter text for h1 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd1" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br>
+<input type="text" id="p1" name="p1" placeholder="Enter text for p tag"><br><br>
+<label for="head2">Heading 2:</label><br>
+<input type="text" id="hd2" name="hd2" placeholder="Enter text for h2 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd2" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br>
+
+<input type="text" id="p2" name="p2" placeholder="Enter text for p tag"><br><br>
+<label for="head3">Heading 3:</label><br>
+<input type="text" id="hd3" name="hd3" placeholder="Enter text for h3 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd3" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br>
+
+<input type="text" id="p3" name="p3" placeholder="Enter text for p tag"><br><br>
+<label for="head4">Heading 4:</label><br>
+<input type="text" id="hd4" name="hd4" placeholder="Enter text for h4 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd4" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br><br>
+
+<label for="head5">Heading 5:</label><br>
+<input type="text" id="hd5" name="hd5" placeholder="Enter text for h5 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd5" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br><br>
+
+<label for="head6">Heading 6:</label><br>
+<input type="text" id="hd6" name="hd6" placeholder="Enter text for h6 tag">
+
+<label for="style">Choose a style:</label>
+
+<select name="sd6" id="style">
+  <option value="1">Bg color</option>
+  <option value="2">Text color</option>
+  <option value="3">Change font</option>
+  <option value="4">Text shadow</option>
+</select>
+<br><br>
+
+<label for="image">Bg Image File:</label><br>
+<input type="text" id="image" name="image" placeholder="Image Location"><br>
+<input type="text" id="alt" name="alt" placeholder="Alternate image title"><br><br>
+<input type="submit" value="Submit">
+</form>
+{% endblock %}
+<!--<form class='form_pos2' action='converted'>
+<label for="title">Page Title:</label><br>
+<input type="text" id="titl" name="titl" placeholder="Enter Title of the page"><br><br>
+<label for="head1">Heading 1:</label><br>
+<input type="text" id="hd1" name="hd1" placeholder="Enter text for h1 tag"><br><br>
+<label for="head2">Heading 2:</label><br>
+<input type="text" id="hd2" name="hd2" placeholder="Enter text for h2 tag"><br><br>
+<label for="head3">Heading 3:</label><br>
+<input type="text" id="hd3" name="hd3" placeholder="Enter text for h3 tag"><br><br>
+<label for="head4">Heading 4:</label><br>
+<input type="text" id="hd4" name="hd4" placeholder="Enter text for h4 tag"><br><br>
+<label for="head5">Heading 5:</label><br>
+<input type="text" id="hd5" name="hd5" placeholder="Enter text for h5 tag"><br><br>
+<label for="head6">Heading 6:</label><br>
+<input type="text" id="hd6" name="hd6" placeholder="Enter text for h6 tag"><br><br>
+<label for="image">Bg Image File:</label><br>
+<input type="text" id="image" name="image" placeholder="Image Location"><br>
+<input type="submit" value="Submit">
+</form>-->
+
+</div>
+</html>
